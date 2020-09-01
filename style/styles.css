@@ -80,7 +80,6 @@ header {
 }
 
 .site-nav {
-  /* display: flex; */
   margin-left: 93px;
 }
 
@@ -106,21 +105,50 @@ header {
 
 .site-nav .link:hover,
 .site-nav .link:focus,
-address .contacts:hover,
-address .contacts:focus {
+address .footer-contacts:hover,
+address .footer-contacts:focus {
   color: var(--accent-color);
 }
 .contacts .link {
   color: var(--text-color);
+  display: inline-flex;
+  align-items: center;
 }
+.contacts {
+  margin-left: auto;
+}
+.contacts .link:hover,
+.contacts .link:focus {
+  fill: var(--accent-color);
+}
+.icon {
+  margin-right: 10px;
+  fill: currentColor;
+}
+
 /* hero */
 
 .hero {
-  background-color: var(--backgroud-gray);
   color: var(--white);
   text-align: center;
   padding-top: 200px;
   padding-bottom: 200px;
+}
+
+.overlay {
+  height: 600px;
+  background-color: var(--backgroud-gray);
+  /* max-width: 1600px; */
+  margin-left: auto;
+  margin-right: auto;
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/overley.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .hero-title {
@@ -176,6 +204,16 @@ address .contacts:focus {
 .features .item:not(:last-child) {
   margin-right: 30px;
 }
+.frame {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--baclground-team);
+  border-radius: 4px;
+  width: 270px;
+  height: 120px;
+  margin-bottom: 20px;
+}
 
 /* what we do */
 
@@ -220,7 +258,7 @@ address .contacts:focus {
   line-height: 1.2;
   color: var(--text-color);
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: 16px;
 }
 .team .box:nth-child(4n) {
   margin-right: 0;
@@ -231,14 +269,64 @@ address .contacts:focus {
   padding-bottom: 30px;
 }
 
+/* links to social networks */
+
+.link-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  fill: #afb1b8;
+}
+.link-icon:hover {
+  background-color: var(--accent-color);
+  fill: white;
+}
+
+.list-icon {
+  justify-content: center;
+}
+/* clients */
+.item-logo {
+  margin-right: 30px;
+}
+
+.item-logo:nth-child(6n) {
+  margin-right: 0;
+}
+.logo-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 90px;
+  border-radius: 4px;
+  border: 1px solid #afb1b8;
+  fill: #afb1b8;
+}
+
+.item-logo .logo-link:hover {
+  fill: var(--accent-color);
+  border-color: var(--accent-color);
+}
+.wer:hover {
+  border: var(--accent-color);
+}
+
 /* footer */
-footer {
+.page-footer {
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: var(--backgroud-gray);
 }
 .studio-white {
   color: var(--white);
+}
+
+.list-colum {
+  flex-direction: column;
 }
 address {
   color: var(--white);
@@ -249,19 +337,42 @@ address .location {
   margin-top: 20px;
   margin-bottom: 9px;
 }
-.contacts {
+
+.footer-contacts {
   color: var(--contacts-color);
-  margin-left: auto;
+}
+.contact-item {
   margin-bottom: 9px;
 }
 
-.contacts:last-child {
+.contact-item:last-child {
   margin-bottom: 0;
 }
 
-footer .contacts {
+.footer {
   display: flex;
-  flex-direction: column;
+  align-items: baseline;
+}
+b {
+  font-weight: 700;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: var(--white);
+}
+.link-icon-2 {
+  margin-right: 10px;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  fill: var(--white);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.join .list {
+  margin-top: 20px;
+}
+.join {
+  margin-left: 70px;
 }
 /* portfolio */
 
@@ -274,11 +385,14 @@ button {
   background-color: var(--baclground-team);
   border: 0;
   border-radius: 4px;
+  cursor: pointer;
 }
 button:hover,
 button:focus {
   color: var(--white);
   background-color: var(--accent-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .btn {
@@ -327,18 +441,26 @@ button:focus {
 .projects .box {
   width: calc((100% - 60px) / 3);
   margin-bottom: 30px;
-  border: 1px solid #eeeeee;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  overflow: hidden;
 }
 .projects .box:nth-last-child(-n + 3) {
   margin-bottom: 0;
 }
-
+.projects .box:hover {
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+}
 .box-caption {
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-right: 24px;
-  padding-left: 24px;
+  padding: 20px 24px;
+  border: 1px solid #eeeeee;
+  box-sizing: border-box;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 .box img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
