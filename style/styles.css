@@ -280,7 +280,8 @@ address .footer-contacts:focus {
   height: 44px;
   fill: #afb1b8;
 }
-.link-icon:hover {
+.link-icon:hover,
+.link-icon:focus {
   background-color: var(--accent-color);
   fill: white;
 }
@@ -307,12 +308,10 @@ address .footer-contacts:focus {
   fill: #afb1b8;
 }
 
-.item-logo .logo-link:hover {
+.item-logo .logo-link:hover,
+.item-logo .logo-link:focus {
   fill: var(--accent-color);
   border-color: var(--accent-color);
-}
-.wer:hover {
-  border: var(--accent-color);
 }
 
 /* footer */
