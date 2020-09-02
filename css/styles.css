@@ -57,7 +57,7 @@ body {
 /* header */
 header {
   background-color: var(--white);
-  border: 1px solid#ECECEC;
+  border-bottom: 1px solid#ECECEC;
 }
 
 .main-nav {
@@ -105,13 +105,13 @@ header {
 
 .site-nav .link:hover,
 .site-nav .link:focus,
-address .footer-contacts:hover,
-address .footer-contacts:focus {
+.footer-contacts:hover,
+.footer-contacts:focus {
   color: var(--accent-color);
 }
 .contacts .link {
   color: var(--text-color);
-  display: inline-flex;
+  display: flex;
   align-items: center;
 }
 .contacts {
@@ -401,9 +401,11 @@ button:focus {
 .btn:last-child {
   margin-right: 0;
 }
+.buttons {
+  padding-bottom: 50px;
+}
 
 .buttons .list {
-  padding-bottom: 50px;
   justify-content: center;
 }
 
